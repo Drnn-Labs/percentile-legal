@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Percentile — Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-primary:   #0F9070;
+      --brand-surface:   #E8F4F0;
+      --brand-700:       #0A6B52;
+      --brand-200:       #6BBDAC;
+      --surface-base:    #F5F4F2;
+      --text-body:       #4A4845;
+      --text-muted:      #7A7876;
+      --dark-page:       #0D1F1A;
+      --dark-card:       #152B24;
+      --dark-border:     #1A3A30;
+      --white:           #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background-color: var(--dark-page);
+      color: var(--white);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(15,144,112,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,144,112,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--dark-border);
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .wordmark-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--brand-primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wordmark-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .wordmark-text {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(32px, 6vw, 44px);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+      letter-spacing: 0.2px;
+    }
+
+    /* Callout */
+    .callout {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-left: 3px solid var(--brand-primary);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .callout-label {
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--brand-200);
+      margin-bottom: 8px;
+    }
+
+    .callout p {
+      font-size: 15px;
+      color: var(--brand-surface);
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--brand-200);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--dark-border);
+    }
+
+    p {
+      font-size: 15px;
+      color: #B0B5B3;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 4px 0 14px 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #B0B5B3;
+      font-weight: 300;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(26, 58, 48, 0.5);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      opacity: 0.6;
+    }
+
+    /* IAP pricing card */
+    .iap-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .iap-card-left .iap-label {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .iap-card-left .iap-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin: 0;
+    }
+
+    .iap-price {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 26px;
+      color: var(--brand-200);
+      white-space: nowrap;
+    }
+
+    /* Disclaimer / legal block */
+    .legal-block {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 16px 0;
+    }
+
+    .legal-block p {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.65;
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+      margin: 0;
+    }
+
+    /* Highlight card */
+    .highlight-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .highlight-card p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    a {
+      color: var(--brand-200);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(107, 189, 172, 0.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: var(--brand-surface);
+      border-bottom-color: rgba(107, 189, 172, 0.7);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--dark-border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .footer-nav {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .footer-nav a {
+      color: var(--brand-200);
+      border-bottom-color: rgba(107, 189, 172, 0.25);
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 40px 20px 60px; }
+      h1 { font-size: 30px; }
+      .iap-card { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <div class="wordmark">
+        <div class="wordmark-icon">
+          <!-- <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 14.5L7.5 9.5L11 12L16.5 6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7.5" cy="9.5" r="1.2" fill="white"/>
+            <circle cx="11" cy="12" r="1.2" fill="white"/>
+            <circle cx="16.5" cy="6" r="1.2" fill="white"/>
+          </svg> -->
+        </div>
+        <span class="wordmark-text">Percentile</span>
+      </div>
+      <h1>Terms of Service</h1>
+      <p class="updated">Last updated: May 16, 2026</p>
+    </header>
+
+    <div class="callout">
+      <div class="callout-label">The short version</div>
+      <p>Percentile is a utility for tracking your baby's growth against WHO reference standards. It's not a medical device. Pay once for Pro, no subscription. Your data stays on your device. Don't misuse the App.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By downloading, installing, or using Percentile – Baby Growth Chart ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+      <p>These Terms apply to all users of the App, including free and Pro subscribers.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Description of Service</h2>
+      <p>Percentile is a personal utility application that allows parents and caregivers to log infant growth measurements — weight, height, and head circumference — and visualize those measurements against the WHO Child Growth Standards (2006) reference curves.</p>
+      <div class="highlight-card">
+        <p><strong>Important:</strong> Percentile is not a medical device, does not provide medical advice, and is not a substitute for professional pediatric care. Growth percentile calculations are provided for informational and reference purposes only. Always consult a qualified healthcare provider regarding your child's health and development.</p>
+      </div>
+      <p>The App operates entirely offline. All computations, including WHO percentile calculations, are performed on your device using embedded reference data. No measurement data is transmitted to any server.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Eligibility</h2>
+      <p>You must be at least 13 years of age to use the App. By using the App, you represent and warrant that you meet this age requirement. The App is designed for use by parents, guardians, and caregivers of infants aged 0–24 months.</p>
+    </div>
+
+    <div class="section">
+      <h2>4. In-App Purchase — Pro Upgrade</h2>
+      <p>The App offers a one-time, non-consumable Pro upgrade processed through the Apple App Store.</p>
+
+      <div class="iap-card">
+        <div class="iap-card-left">
+          <div class="iap-label">Percentile Pro</div>
+          <p class="iap-desc">One-time purchase · No subscription · No account required</p>
+        </div>
+        <div class="iap-price">$4.99</div>
+      </div>
+
+      <p>Pro unlocks: WHO percentile bands on all charts, unlimited measurement history, up to 5 baby profiles, PDF export for pediatrician visits, iCloud backup and restore, and the feeding log.</p>
+      <p>Because Pro is a <strong>non-consumable</strong> in-app purchase, it is permanently associated with your Apple ID and can be restored at no charge on any device signed in to the same Apple ID. Use the "Restore Purchases" option in the App's paywall or Settings screen to recover a prior purchase.</p>
+      <p>All purchases are processed by Apple and are subject to <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">Apple's Media Services Terms and Conditions</a>. We do not handle payment information directly.</p>
+      <p>Prices are displayed in USD and may vary by region as determined by Apple's regional pricing. We reserve the right to change the price of the Pro upgrade at any time; any price change will not affect purchases already completed.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. Refunds</h2>
+      <p>All purchases are final and processed by Apple. We do not issue refunds directly. If you believe you are entitled to a refund, you may request one through Apple via <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>, subject to Apple's refund policies.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Free Tier Limitations</h2>
+      <p>The free tier of the App includes the following limitations:</p>
+      <ul>
+        <li>Maximum of 1 baby profile</li>
+        <li>Maximum of 20 measurement log entries (hard cap)</li>
+        <li>Basic growth chart with measurement lines only (no WHO percentile bands)</li>
+        <li>1 active pediatrician reminder</li>
+        <li>No PDF export</li>
+        <li>No iCloud backup</li>
+        <li>No feeding log</li>
+      </ul>
+      <p>Existing data is never hidden or deleted when you reach the free tier limits. The 20 existing entries remain fully visible and editable at all times.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Medical Disclaimer</h2>
+      <p>Percentile uses WHO Child Growth Standards (2006) as its reference dataset. This is the internationally recognized standard recommended by the CDC and AAP for children aged 0–24 months. The calculations performed by the App are intended to replicate these published standards accurately.</p>
+      <p>However:</p>
+      <ul>
+        <li>The App does not provide diagnoses, clinical assessments, or medical advice</li>
+        <li>Growth percentile information should be interpreted by a qualified healthcare provider in the context of your child's full clinical picture</li>
+        <li>The App does not account for corrected gestational age in premature infants</li>
+        <li>A single measurement or percentile value is rarely clinically meaningful in isolation — trends over time are what matter clinically</li>
+      </ul>
+      <p>If you have concerns about your child's growth or development, consult your pediatrician. Do not delay seeking professional medical advice based on information from this App.</p>
+    </div>
+
+    <div class="section">
+      <h2>8. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of the App</li>
+        <li>Attempt to circumvent in-app purchase verification or Pro entitlement checks</li>
+        <li>Use the App for any unlawful purpose or in violation of any applicable law or regulation</li>
+        <li>Sell, sublicense, or otherwise transfer your rights under these Terms to any third party</li>
+        <li>Use automated tools to interact with the App in a manner not intended by its design</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>9. Intellectual Property</h2>
+      <p>The App, including its code, design, visual assets, and all content created by us, is owned by Nelson Uprety and is protected by copyright, trademark, and other applicable intellectual property laws.</p>
+      <p>The WHO Child Growth Standards data embedded in the App is published by the World Health Organization and used in accordance with WHO's open-access publication terms. WHO does not endorse this App.</p>
+      <p>You are granted a limited, non-exclusive, non-transferable, revocable license to use the App for its intended personal purpose on Apple-authorized devices you own or control, in accordance with these Terms and the <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">App Store Terms of Service</a>.</p>
+    </div>
+
+    <div class="section">
+      <h2>10. Data & Privacy</h2>
+      <p>All growth data, baby profiles, and personal information you enter is stored locally on your device. We collect no personal data. For full details, see our <a href="privacy.html">Privacy Policy</a>.</p>
+      <p>You are solely responsible for maintaining backups of your data. Deleting the App permanently removes all locally stored data. We are not liable for data loss resulting from App deletion, device failure, device transfer, or any other cause.</p>
+    </div>
+
+    <div class="section">
+      <h2>11. Disclaimer of Warranties</h2>
+      <div class="legal-block">
+        <p>The App is provided "as is" and "as available" without warranty of any kind, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, and non-infringement. We do not warrant that the App will be error-free, uninterrupted, or free of defects. We do not warrant the accuracy of WHO percentile calculations beyond the accuracy of the embedded source data and the LMS method as published. Use of the App is at your sole risk.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>12. Limitation of Liability</h2>
+      <div class="legal-block">
+        <p>To the maximum extent permitted by applicable law, Nelson Uprety shall not be liable for any indirect, incidental, special, consequential, punitive, or exemplary damages arising from or related to your use of or inability to use the App, including but not limited to loss of data, loss of profits, or any harm arising from reliance on App output for medical or health-related decisions. Our total aggregate liability to you for any claim arising from these Terms or your use of the App shall not exceed the amount you paid for the App (the Pro upgrade price) in the twelve months preceding the claim.</p>
+      </div>
+      <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In those jurisdictions, our liability is limited to the maximum extent permitted by law.</p>
+    </div>
+
+    <div class="section">
+      <h2>13. Indemnification</h2>
+      <p>You agree to indemnify, defend, and hold harmless Nelson Uprety from and against any claims, damages, losses, costs, and expenses (including reasonable legal fees) arising from your use of the App, your violation of these Terms, or your violation of any applicable law or third-party rights.</p>
+    </div>
+
+    <div class="section">
+      <h2>14. App Store Terms</h2>
+      <p>The App is distributed through Apple's App Store. Your use of the App is also subject to Apple's <a href="https://www.apple.com/legal/internet-services/itunes/us/terms.html" target="_blank" rel="noopener">App Store Terms of Service</a>. In the event of a conflict between these Terms and Apple's terms, Apple's terms govern with respect to App Store-specific matters (purchases, refunds, distribution).</p>
+      <p>Apple is not a party to these Terms, is not responsible for the App or its content, and has no obligation to provide any maintenance or support services for the App.</p>
+    </div>
+
+    <div class="section">
+      <h2>15. Termination</h2>
+      <p>These Terms remain in effect until terminated. Your rights under these Terms terminate automatically if you fail to comply with any provision. Upon termination, you must cease all use of the App and delete it from your devices.</p>
+      <p>We reserve the right to discontinue the App or any feature at any time without notice, though we will make reasonable efforts to maintain Pro functionality for existing purchasers.</p>
+    </div>
+
+    <div class="section">
+      <h2>16. Governing Law & Disputes</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the Province of Alberta, Canada, without regard to its conflict of law principles.</p>
+      <p>Any dispute arising from these Terms or your use of the App shall first be attempted to be resolved informally by contacting us at the address below. If informal resolution fails after 30 days, disputes shall be submitted to binding arbitration in Calgary, Alberta, under the Arbitration Act (Alberta), unless prohibited by applicable consumer protection law in your jurisdiction.</p>
+      <p>Nothing in this section prevents you from asserting rights you have under consumer protection legislation in your province or country that cannot be waived by contract.</p>
+    </div>
+
+    <div class="section">
+      <h2>17. Changes to These Terms</h2>
+      <p>We may update these Terms at any time. We will update the "Last updated" date at the top of this page. For material changes, we will make reasonable efforts to notify users (for example, via an in-app notice on next launch). Continued use of the App after the effective date of updated Terms constitutes your acceptance of the changes.</p>
+    </div>
+
+    <div class="section">
+      <h2>18. Severability</h2>
+      <p>If any provision of these Terms is found to be unenforceable or invalid by a court of competent jurisdiction, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will continue in full force and effect.</p>
+    </div>
+
+    <div class="section">
+      <h2>19. Contact</h2>
+      <p>
+        <strong>Nelson Uprety</strong><br>
+        Email: <a href="mailto:motosaka731@gmail.com">motosaka731@gmail.com</a><br>
+        Calgary, Alberta, Canada
+      </p>
+    </div>
+
+    <footer class="footer">
+      <p class="footer-copy">© 2026 Nelson Uprety. All rights reserved.</p>
+      <p class="footer-nav">Also see: <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>
