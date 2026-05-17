@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Percentile — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brand-primary:   #0F9070;
+      --brand-surface:   #E8F4F0;
+      --brand-700:       #0A6B52;
+      --brand-200:       #6BBDAC;
+      --surface-base:    #F5F4F2;
+      --text-body:       #4A4845;
+      --text-muted:      #7A7876;
+      --dark-page:       #0D1F1A;
+      --dark-card:       #152B24;
+      --dark-border:     #1A3A30;
+      --white:           #FFFFFF;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, sans-serif;
+      background-color: var(--dark-page);
+      color: var(--white);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* Subtle grid texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(15,144,112,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,144,112,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--dark-border);
+    }
+
+    .wordmark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .wordmark-icon {
+      width: 36px;
+      height: 36px;
+      background: var(--brand-primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .wordmark-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .wordmark-text {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 22px;
+      color: var(--white);
+      letter-spacing: -0.3px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: clamp(32px, 6vw, 44px);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .updated {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+      letter-spacing: 0.2px;
+    }
+
+    /* Short version callout */
+    .callout {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-left: 3px solid var(--brand-primary);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
+
+    .callout-label {
+      font-size: 10px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--brand-200);
+      margin-bottom: 8px;
+    }
+
+    .callout p {
+      font-size: 15px;
+      color: var(--brand-surface);
+      font-weight: 400;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--brand-200);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--dark-border);
+    }
+
+    p {
+      font-size: 15px;
+      color: #B0B5B3;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    /* List */
+    ul {
+      list-style: none;
+      margin: 4px 0 14px 0;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #B0B5B3;
+      font-weight: 300;
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid rgba(26, 58, 48, 0.5);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand-primary);
+      opacity: 0.6;
+    }
+
+    /* Highlight card */
+    .highlight-card {
+      background: var(--dark-card);
+      border: 1px solid var(--dark-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 16px 0;
+    }
+
+    .highlight-card p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* Strong inline */
+    strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    a {
+      color: var(--brand-200);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(107, 189, 172, 0.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      color: var(--brand-surface);
+      border-bottom-color: rgba(107, 189, 172, 0.7);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 64px;
+      padding-top: 28px;
+      border-top: 1px solid var(--dark-border);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .footer-nav {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    .footer-nav a {
+      color: var(--brand-200);
+      border-bottom-color: rgba(107, 189, 172, 0.25);
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      .container { padding: 40px 20px 60px; }
+      h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="header">
+      <div class="wordmark">
+        <div class="wordmark-icon">
+          <!-- Simple growth chart icon -->
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 14.5L7.5 9.5L11 12L16.5 6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="7.5" cy="9.5" r="1.2" fill="white"/>
+            <circle cx="11" cy="12" r="1.2" fill="white"/>
+            <circle cx="16.5" cy="6" r="1.2" fill="white"/>
+          </svg>
+        </div>
+        <span class="wordmark-text">Percentile</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: May 16, 2026</p>
+    </header>
+
+    <div class="callout">
+      <div class="callout-label">The short version</div>
+      <p>Percentile collects absolutely no personal data. Your baby's growth data lives only on your device. The developer cannot see, access, or share it — because it never reaches our servers. There are no servers.</p>
+    </div>
+
+    <div class="section">
+      <h2>1. Overview</h2>
+      <p>Percentile – Baby Growth Chart ("the App") is developed by Nelson Uprety ("we", "us", "our"). This Privacy Policy describes what data we collect, how we use it, and your rights.</p>
+      <p>The answer to "what data do we collect?" is: none. The App is architecturally incapable of collecting personal data because it has no backend, no database, and no server of any kind. This is a deliberate design choice, not a compliance shortcut.</p>
+    </div>
+
+    <div class="section">
+      <h2>2. Data We Do Not Collect</h2>
+      <p>We collect no personal information whatsoever. Specifically, we do not collect:</p>
+      <ul>
+        <li>Your name, email address, or any contact information</li>
+        <li>Your baby's name, date of birth, sex, or measurements</li>
+        <li>Location data of any kind</li>
+        <li>Health or biometric data</li>
+        <li>Device identifiers or advertising IDs (IDFA)</li>
+        <li>Usage analytics or behavioral telemetry</li>
+        <li>Crash reports transmitted to any external service</li>
+        <li>Any form of tracking or fingerprinting data</li>
+      </ul>
+      <p>The App contains no analytics SDK, no advertising SDK, and no crash reporting SDK that transmits data externally. This is verifiable by auditing the app binary.</p>
+    </div>
+
+    <div class="section">
+      <h2>3. Data Stored on Your Device</h2>
+      <p>The App stores the following data <strong>locally on your device only</strong>, using on-device SQLite storage:</p>
+      <ul>
+        <li>Baby profiles (name, date of birth, sex)</li>
+        <li>Growth measurements (weight, height, head circumference, date, notes)</li>
+        <li>Milestones you record</li>
+        <li>Pediatrician appointment reminders</li>
+        <li>Feeding log entries (Pro)</li>
+        <li>App preferences (units, dark mode)</li>
+        <li>In-app purchase status</li>
+      </ul>
+      <div class="highlight-card">
+        <p>This data never leaves your device unless you are a Pro subscriber who explicitly enables iCloud backup. When iCloud backup is enabled, data is written to your <strong>private iCloud container</strong> — a storage space controlled entirely by you and Apple. We cannot read it, access it, or copy it. Not even in aggregate.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>4. iCloud Backup (Pro)</h2>
+      <p>Pro subscribers may optionally back up their data to iCloud. This backup uses Apple's CloudKit private container, which means:</p>
+      <ul>
+        <li>The data is stored in your personal iCloud account</li>
+        <li>Only you can access it</li>
+        <li>We have no technical ability to read, modify, or delete it</li>
+        <li>It is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a></li>
+      </ul>
+      <p>iCloud backup is strictly opt-in and requires Pro. Free tier users' data never leaves their device under any circumstances.</p>
+    </div>
+
+    <div class="section">
+      <h2>5. In-App Purchases</h2>
+      <p>The App offers an optional one-time Pro upgrade ($4.99 USD) processed entirely by Apple through the App Store. We use RevenueCat solely to verify your purchase entitlement. RevenueCat operates in anonymous mode — it receives no name, email, or personally identifiable information from us or from you.</p>
+      <p>Your payment information is handled exclusively by Apple and is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>. We never see your payment details.</p>
+    </div>
+
+    <div class="section">
+      <h2>6. Third-Party Services</h2>
+      <p>The App integrates with exactly two third-party services:</p>
+      <ul>
+        <li><strong>RevenueCat</strong> — anonymous in-app purchase validation only. No personal data shared. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</li>
+        <li><strong>Apple CloudKit</strong> — private iCloud backup for Pro subscribers only. Data stays in your personal iCloud account.</li>
+      </ul>
+      <p>No other third-party service, SDK, or API is integrated. No advertising network. No analytics platform. No social SDK.</p>
+    </div>
+
+    <div class="section">
+      <h2>7. Growth Chart Standards</h2>
+      <p>Percentile calculations are performed entirely on-device using the WHO Child Growth Standards (2006), embedded as static data within the App. No measurement data is sent to WHO or any external service to perform calculations. The WHO data is used as a reference only and does not involve any data transmission.</p>
+      <p>Attribution: <em>WHO Multicentre Growth Reference Study Group. WHO Child Growth Standards: Length/height-for-age, weight-for-age, weight-for-length, weight-for-height and body mass index-for-age: Methods and development. Geneva: World Health Organization, 2006.</em></p>
+    </div>
+
+    <div class="section">
+      <h2>8. Local Notifications</h2>
+      <p>If you set a pediatrician appointment reminder, the App schedules a local push notification on your device using iOS's on-device notification system. These notifications are generated and delivered entirely locally — no notification passes through our servers, and no data about your appointments is transmitted anywhere.</p>
+      <p>You may revoke notification permission at any time in iOS Settings → Percentile → Notifications. The App will never re-request permission after you deny it.</p>
+    </div>
+
+    <div class="section">
+      <h2>9. Apple Privacy Nutrition Label</h2>
+      <p>Consistent with this policy, the App's App Store Privacy Nutrition Label declares <strong>"Data Not Collected"</strong> with one exception: <strong>Purchases → Data Not Linked to You</strong>, which reflects anonymous purchase receipts handled by Apple and RevenueCat. No data is linked to your identity.</p>
+    </div>
+
+    <div class="section">
+      <h2>10. Data Retention & Deletion</h2>
+      <p>Since all data is stored locally on your device, you have complete control over it:</p>
+      <ul>
+        <li>Deleting the App permanently removes all locally stored data</li>
+        <li>Individual measurements, babies, and milestones can be deleted within the App at any time</li>
+        <li>The "Reset all data" option in Settings wipes everything and returns the App to its initial state</li>
+        <li>If you use iCloud backup, deleting your iCloud account or the backup file removes it from iCloud</li>
+      </ul>
+      <p>We retain no data on any server because we have no servers.</p>
+    </div>
+
+    <div class="section">
+      <h2>11. Children's Privacy</h2>
+      <p>Percentile is designed for use by parents tracking infant growth. The App is rated 4+ on the App Store. We do not collect personal data from any user, including children or minors. Because no data is collected, the App is fully compliant with COPPA, GDPR-K, and equivalent children's privacy regulations by design.</p>
+    </div>
+
+    <div class="section">
+      <h2>12. Your Rights (GDPR / CCPA / PIPEDA)</h2>
+      <p>Percentile is designed to be fully compliant with GDPR, CCPA, PIPEDA, and equivalent privacy regulations worldwide. Because we collect no personal data:</p>
+      <ul>
+        <li>There is no data for us to provide upon access request</li>
+        <li>There is no data for us to correct or delete on your behalf</li>
+        <li>No consent is required for data processing, because no data is processed by us</li>
+        <li>There is no data sale or data sharing to opt out of</li>
+      </ul>
+      <p>If you have concerns or questions, contact us at the address below. We will respond within 30 days.</p>
+    </div>
+
+    <div class="section">
+      <h2>13. Changes to This Policy</h2>
+      <p>We will update this page if our data practices change. Any material change that results in data collection will be clearly disclosed and, where required by law, will require your explicit consent before taking effect. The "Last updated" date at the top reflects the most recent revision.</p>
+      <p>Continued use of the App after a non-material update constitutes acceptance of the revised policy.</p>
+    </div>
+
+    <div class="section">
+      <h2>14. Contact</h2>
+      <p>
+        <strong>Nelson Uprety</strong><br>
+        Email: <a href="mailto:motosaka731@gmail.com">motosaka731@gmail.com</a><br>
+        Calgary, Alberta, Canada
+      </p>
+    </div>
+
+    <footer class="footer">
+      <p class="footer-copy">© 2026 Nelson Uprety. All rights reserved.</p>
+      <p class="footer-nav">Also see: <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>
